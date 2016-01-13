@@ -12,6 +12,7 @@ GET http://localhost:3000/counters.json
 
 PUT http://localhost:3000/counters/1.json
 - actualizar os campos do counter com id = 1
+  - também é possivel aceder a counters/running.json para actualizar o counter que esta a contar
 - pode ser usado para pausar para "pausar"
 - payload: {
     counter: {

@@ -10,7 +10,11 @@ class CountersController < ApplicationController
   end
 
   def update
-    @counter = Counter.find(params[:id])
+    if params[:id] == 'running'
+      @counter = Counter.find_by_stopped_at(nil)
+    else
+      @counter = Counter.find(params[:id])
+    end
     @counter.update_attributes(counter_attributes)
     render :errors unless @counter.valid?
   end
