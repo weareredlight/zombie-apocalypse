@@ -1,28 +1,24 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+JSON API:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+POST http://localhost:3000/counters.json
+- cria um novo counter com inicio em Time.now
+- só pode haver um counter a correr de cada vez, senão o API dá erro
+
+
+GET http://localhost:3000/counters.json
+- devolve uma lista de counters
+
+
+PUT http://localhost:3000/counters/1.json
+- actualizar os campos do counter com id = 1
+- pode ser usado para pausar para "pausar"
+- payload: {
+    counter: {
+      stopped_at: "2016-01-13T12:43:47"
+    }
+  }
+
+
+DELETE http://localhost:3000/counters/reset.json
+- apaga todos os registos, pode ser usado para fazer reset
