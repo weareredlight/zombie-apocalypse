@@ -11,6 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160113114400) do
+
+  create_table "counters", force: :cascade do |t|
+    t.datetime "started_at", null: false
+    t.datetime "stopped_at"
+  end
 
 end
