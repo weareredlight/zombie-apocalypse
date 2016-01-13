@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'counters#index'
+
   resources :counters do
     delete 'reset', on: :collection
   end
