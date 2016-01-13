@@ -1,3 +1,19 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.mt-5   { margin-top: 5px   }
+.mt-50  { margin-top: 50px  }
+.mt-100 { margin-top: 100px }
+
+.mb-5   { margin-bottom: 5px }
+
+.ml-5   { margin-left: 5px   }
+.ml-10  { margin-left: 10px  }
+.ml-100 { margin-left: 100px }
+
+.w-40pct { width: 40% }
+
+.timer-box {
+    padding: 10px;
+}
